@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
 import Filter from './properties/Filter';
 
 export default function PropertiesPage() {
@@ -23,8 +22,6 @@ export default function PropertiesPage() {
 
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-neutral-900">
-      <Navbar />
-
       <main className="max-w-7xl mx-auto px-6 md:px-12 py-12">
         {/* Page Title Section */}
         <div className="mb-10">

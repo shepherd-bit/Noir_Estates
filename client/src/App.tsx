@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Navbar from './components/Navbar';
 import IndexPage from './pages/IndexPage';
 import PropertiesPage from './pages/PropertiesPage';
 
@@ -9,7 +10,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-black">
       {/* Permanent Navbar */}
-      
+      <Navbar 
+        liveCount={0} 
+        onNavigate={(page) => setCurrentPage(page)}
+        onListProperty={() => alert('List property action clicked!')}
+      />
 
       {/* Dynamic Page Content Area */}
       <main>
