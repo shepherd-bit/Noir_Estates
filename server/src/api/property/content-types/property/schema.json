@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "singularName": "property",
+    "pluralName": "properties",
+    "displayName": "Property"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "propertyName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "propertyName"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "propertyType": {
+      "type": "enumeration",
+      "enum": [
+        "VILLA",
+        "PENTHOUSE",
+        "APARTMENT",
+        "TOWNHOUSE"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "bedrooms": {
+      "type": "integer"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "areaSqFt": {
+      "type": "decimal"
+    },
+    "yearBuilt": {
+      "type": "biginteger"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "neighborhood": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "amenities": {
+      "type": "richtext"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
