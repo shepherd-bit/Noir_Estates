@@ -1,4 +1,5 @@
 interface PropertyCardProps {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   property: any;
   variant?: 'index' | 'grid' | 'list';
 }
