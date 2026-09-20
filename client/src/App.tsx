@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Navbar from './components/Navbar';
 import IndexPage from './pages/IndexPage';
+import PropertiesPage from './pages/PropertiesPage';
 
 export default function App() {
   // Simple state to track which page is currently active
@@ -9,22 +9,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-black">
       {/* Permanent Navbar */}
-      <Navbar 
-        liveCount={0} 
-        onNavigate={(page) => setCurrentPage(page)}
-        onListProperty={() => alert('List property action clicked!')}
-      />
+      
 
       {/* Dynamic Page Content Area */}
       <main>
         {currentPage === 'index' && <IndexPage />}
 
-        {currentPage === 'properties' && (
-          <div className="p-8">
-            <h1 className="text-4xl font-bold mb-4">Properties Page Container</h1>
-            <p className="text-gray-600">Filter.tsx, PropertyNav.tsx, and Grid.tsx will go here.</p>
-          </div>
-        )}
+        {currentPage === 'properties' && <PropertiesPage />}
 
         {currentPage === 'details' && (
           <div className="p-8">
