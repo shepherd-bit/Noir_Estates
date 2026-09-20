@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Filter from './properties/Filter';
+import PropertyCard from '../components/PropertyCard';
 
 export default function PropertiesPage() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -38,12 +39,16 @@ export default function PropertiesPage() {
               </div>
             ) : properties.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="border border-dashed border-gray-300 rounded-[32px] p-16 text-center text-neutral-400 col-span-2">
-                  {properties.length} Listings Found (Grid component ready to plug in)
-                </div>
+                {properties.map((item) => (
+                  <PropertyCard 
+                    key={item.id} 
+                    property={item} 
+                    variant="grid" 
+                  />
+                ))}
               </div>
             ) : (
-              <div className="border border-dashed border-gray-300 rounded-[32px] p-20 text-center text-neutral-400">
+              <div className="border border-dashed border-gray-300 rounded-[32px] p-20 text-center text-neutral-400 col-span-2">
                 No Properties Available
               </div>
             )}
