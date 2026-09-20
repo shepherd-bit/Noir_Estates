@@ -1,10 +1,17 @@
+import { motion } from 'framer-motion';
+
 export default function Hero() {
   return (
-    <section className="w-full bg-[#FBF9F5] py-16 px-8">
+    <section className="w-full bg-[#FBF9F5] py-16 px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        {/* Left Column: Text Content */}
-        <div className="lg:col-span-6 space-y-8">
+        {/* Left Column: Text Content with Entry Animation */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-6 space-y-8"
+        >
           
           {/* Top Badge */}
           <div className="inline-flex items-center space-x-2 bg-gray-100 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-gray-700">
@@ -30,13 +37,13 @@ export default function Hero() {
             <div className="flex -space-x-2 overflow-hidden">
               {/* Profile Image Containers */}
               <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#FBF9F5] bg-gray-200 overflow-hidden">
-                <img src="./Hero-Avatars/Avatar-4.png" alt="Collector 1" className="h-full w-full object-cover" />
+                <img src="/Hero-Avatars/Avatar-4.png" alt="Collector 1" className="h-full w-full object-cover" />
               </div>
               <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#FBF9F5] bg-gray-200 overflow-hidden">
-                <img src="./Hero-Avatars/Avatar-11.png" alt="Collector 2" className="h-full w-full object-cover" />
+                <img src="/Hero-Avatars/Avatar-11.png" alt="Collector 2" className="h-full w-full object-cover" />
               </div>
               <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#FBF9F5] bg-gray-200 overflow-hidden">
-                <img src="./Hero-Avatars/Avatar-16.png" alt="Collector 3" className="h-full w-full object-cover" />
+                <img src="/Hero-Avatars/Avatar-16.png" alt="Collector 3" className="h-full w-full object-cover" />
               </div>
             </div>
             <div className="text-xs text-gray-600">
@@ -45,15 +52,20 @@ export default function Hero() {
             </div>
           </div>
 
-        </div>
+        </motion.div>
 
-        {/* Right Column: Featured Card Showcase */}
-        <div className="lg:col-span-6 relative">
+        {/* Right Column: Featured Card Showcase with Staggered Entry Animation */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-6 relative"
+        >
           <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-900 aspect-[4/5]">
             
             {/* Main Hero Image Container */}
             <img 
-              src="./hero.jpg" 
+              src="/hero.jpg" 
               alt="Hero Property" 
               className="absolute inset-0 w-full h-full object-cover opacity-90"
             />
@@ -70,22 +82,22 @@ export default function Hero() {
 
             {/* Bottom Metrics Bar */}
             <div className="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3 z-10">
-              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl">
+              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl shadow-lg">
                 <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Total Value</p>
                 <p className="text-sm font-black text-black mt-0.5">7 Billion</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl">
+              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl shadow-lg">
                 <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Total Size</p>
                 <p className="text-sm font-black text-black mt-0.5">600K FT²</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl">
+              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl shadow-lg">
                 <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Years of Ops</p>
                 <p className="text-sm font-black text-black mt-0.5">17</p>
               </div>
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
