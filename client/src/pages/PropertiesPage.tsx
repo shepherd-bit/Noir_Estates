@@ -24,14 +24,14 @@ export default function PropertiesPage() {
     <div className="min-h-screen bg-[#FBF9F5] text-neutral-900">
       <main className="max-w-7xl mx-auto px-6 md:px-12 py-12">
         {/* Layout Grid: Filter Sidebar + Main Content Area */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
-          {/* Sticky Filter Sidebar Container */}
-          <aside className="lg:col-span-1 sticky top-28">
-            <Filter />
-          </aside>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            {/* Filter Sidebar (takes 4 out of 12 columns, giving it more natural width) */}
+            <aside className="lg:col-span-4 sticky top-28">
+                <Filter />
+            </aside>
 
           {/* Properties Listing Grid Area */}
-          <section className="lg:col-span-3">
+          <section className="lg:col-span-8">
             {loading ? (
               <div className="border border-dashed border-gray-300 rounded-[32px] p-20 text-center text-neutral-400">
                 Loading properties...
