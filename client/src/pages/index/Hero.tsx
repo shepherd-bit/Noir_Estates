@@ -12,10 +12,10 @@ export default function Hero() {
             <span>Editorial Collection 2026</span>
           </div>
 
-          {/* Headline - Stacked vertically, larger font, unbolded/italicized 'that' */}
-          <h1 className="text-6xl lg:text-7xl font-black tracking-tight text-black leading-[1.05]">
+          {/* Headline - Scaled up larger */}
+          <h1 className="text-7xl lg:text-8xl font-black tracking-tight text-black leading-[0.95]">
             <span className="block">Homes</span>
-            <span className="block font-normal italic">that</span>
+            <span className="block font-normal italic my-1">that</span>
             <span className="block">shape</span>
             <span className="block">you.</span>
           </h1>
