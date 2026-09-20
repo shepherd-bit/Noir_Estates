@@ -36,7 +36,7 @@ export default function Filter() {
   const [bedrooms, setBedrooms] = useState<number>(0);
   const [bathrooms, setBathrooms] = useState<number>(0);
   const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
-  const [priceRange, setPriceRange] = useState<number>(4.5); // Stored as millions (e.g., 4.5M)
+  const [priceRange, setPriceRange] = useState<number>(4.5);
   const [squareFootage, setSquareFootage] = useState<number>(5000);
   const [yearBuilt, setYearBuilt] = useState<number>(2026);
 
@@ -68,7 +68,7 @@ export default function Filter() {
   };
 
   return (
-    <div className="w-full max-w-sm bg-white border border-gray-100 rounded-[32px] p-6 shadow-sm flex flex-col max-h-[85vh]">
+    <div className="w-full max-w-md bg-white border border-gray-100 rounded-[32px] p-6 shadow-sm flex flex-col max-h-[85vh]">
       {/* Header */}
       <div className="flex items-center justify-between pb-6 mb-6 border-b border-gray-100 flex-shrink-0">
         <h2 className="text-sm font-bold tracking-widest text-gray-900">FILTERS</h2>

@@ -23,16 +23,6 @@ export default function PropertiesPage() {
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-neutral-900">
       <main className="max-w-7xl mx-auto px-6 md:px-12 py-12">
-        {/* Page Title Section */}
-        <div className="mb-10">
-          <h1 className="text-4xl md:text-5xl font-light tracking-tight mb-3">
-            Properties Catalog
-          </h1>
-          <p className="text-neutral-500 text-sm">
-            Explore exclusive luxury listings tailored to your lifestyle.
-          </p>
-        </div>
-
         {/* Layout Grid: Filter Sidebar + Main Content Area */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
           {/* Sticky Filter Sidebar Container */}
