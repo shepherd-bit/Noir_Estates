@@ -30,13 +30,13 @@ export default function Hero() {
             <div className="flex -space-x-2 overflow-hidden">
               {/* Profile Image Containers */}
               <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#FBF9F5] bg-gray-200 overflow-hidden">
-                <img src="" alt="Collector 1" className="h-full w-full object-cover" />
+                <img src="./Hero-Avatars/Avatar-4.png" alt="Collector 1" className="h-full w-full object-cover" />
               </div>
               <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#FBF9F5] bg-gray-200 overflow-hidden">
-                <img src="" alt="Collector 2" className="h-full w-full object-cover" />
+                <img src="./Hero-Avatars/Avatar-11.png" alt="Collector 2" className="h-full w-full object-cover" />
               </div>
               <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#FBF9F5] bg-gray-200 overflow-hidden">
-                <img src="" alt="Collector 3" className="h-full w-full object-cover" />
+                <img src="./Hero-Avatars/Avatar-16.png" alt="Collector 3" className="h-full w-full object-cover" />
               </div>
             </div>
             <div className="text-xs text-gray-600">
@@ -53,7 +53,7 @@ export default function Hero() {
             
             {/* Main Hero Image Container */}
             <img 
-              src="" 
+              src="./hero.jpg" 
               alt="Hero Property" 
               className="absolute inset-0 w-full h-full object-cover opacity-90"
             />
